@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>DES_6412_DK_DK_Precis_Viaplay_Expander</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWV33XE7SE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RWV33XE7SE');
+    </script>
+
+    <!-- Basic expander styles, typgraphy, fallback settings etc. -->
+    <link rel="stylesheet" href="css/expander/main.css">
+
+    <!-- Video module -->
+    <link rel="stylesheet" href="css/expander/video.css">
+
+    <!-- Slider module -->
+    <link rel="stylesheet" href="css/expander/slider.css">
+    <link rel="stylesheet" href="css/vendor/tiny-slider.css">
+
+    <!-- Custom design shall be adjusted within this file. -->
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+    
+    <div class="expander">
+
+      <!-- <button class="scroll-down-button"><span>Scroll down</span></button> -->
+
+      <header class="header">
+        <span class="logo">
+          <img src="assets/logo.png" width="300">
+        </span>
+        <div class="date">
+        <h3>16. maj på</h3>
+        <h4>Viaplay og TV3</h4>
+        </div>
+        <!-- <a href="https://showheroes.com/" target="_blank" class="cta">About us ></a> -->
+      </header>
+
+      <section class="expander-video" >
+        <!-- data-volume-half -->
+        <video autoplay playsinline muted id="mainVideo">
+          <source type="video/mp4" src="assets/video_1.mp4">
+        </video>
+
+      </section>
+
+      <div class="video-button-container">
+        <input type="radio" id="video1" name="video" value="assets/video_1.mp4" onclick="playVideo(this.value); displayText(1)" checked>
+        <label class="video-buttons" for="video1">Ungdomspolitikeren</label><br>
+      
+        <input type="radio" id="video2" name="video" value="assets/video_2.mp4" onclick="playVideo(this.value); displayText(2)">
+        <label class="video-buttons" for="video2">Manden med dødslisten</label><br>
+      
+        <input type="radio" id="video3" name="video" value="assets/video_3.mp4" onclick="playVideo(this.value); displayText(3)">
+        <label class="video-buttons" for="video3">Garagemorderen</label><br>
+      
+        <input type="radio" id="video4" name="video" value="assets/video_4.mp4" onclick="playVideo(this.value); displayText(4)">
+        <label class="video-buttons" for="video4">Den iskolde bedrager</label><br>
+      </div>
+    
+      <!-- <video id="mainVideo" width="640" height="480" controls autoplay>
+        <source src="assets/video_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
+    
+      <section class="section centered intro">
+        <img src="assets/txt.png" class="image-txt">
+        <p class="intro-paragraph" id="txt-1">Som kun 15-årig tegner der sig en lovende politisk fremtid for sprudlende og selvsikre Jan-Evald Pedersen Hardlei – men den politiske karriere bliver kort. 3 år efter står han nemlig tilbage som drabsmand og offeret er hans tidligere barndomsveninde.</p>
+        <p class="intro-paragraph" id="txt-2">Den 22-årige jurastuderende Jeppe Møller ligner udadtil en hver anden velfungerende ung mand, men Jeppe er en mand på en farlig mission. Jeppe vil være Danmarks første seriemorder og i starten af sine 20’er skriver han sit manifest og formulerer en hemmelig liste med 17 kvinder.</p>
+        <p class="intro-paragraph" id="txt-3">En novemberaften i 2018, er den 28- årige familiefar Rasmus på værtshus i Hadsund som så ofte før. Samme aften er 40-årig Petrea taget til byen for at feste med veninderne. I løbet af natten udvikler det tilfældigt møde sig så fatalt, at det kommer til at ryste ikke alene lokalsamfundet, men hele Danmark.</p>
+        <p class="intro-paragraph" id="txt-4">Michael har i en årrække svindlet og bedraget sin arbejdsplads, sine kærester og sågar sin egen søn. Men ved juletid tager han en drastisk beslutning og dræber på brutal vis sin egen kæreste, Mette, for at hæve hendes kontanthjælp og svindle hendes nærmeste. Men hvordan kan det gå så vidt? Hvordan kan en simpel bedrager udviklet sig til iskold morder? Det søger tidligere efterforsker Sebastian Richelsen svar på.</p>
+        <div class="section centered">
+          <a href="https://showheroes.com/" target="_blank" class="cta">Se mere</a>
+        </div>
+      </section>
+
+
+      <!-- <section class="section">
+        <h2 class="subheading">What we do</h2>
+        <p>
+          Our global lineup of professional, video-centric publisher solutions include ShowHeroes Monetize, a video licensing and monetization platform, and ShowHeroes Play, a full-featured Online Video Platform (OVP), geared towards large, professional media brands looking for video asset and content management tools.
+        </p>
+        <p>
+          For advertisers, ShowHeroes offers personalized, brand-safe solutions at scale through our in-house, engaging video formats paired with a broad variety of targeting options including contextual targeting powered by Semantic Hero, our AI-driven, semantic-matching technology. Brands take advantage of incremental audiences and global reach while gaining access to over 150k premium video clips and custom production.
+        </p>
+      </section>
+
+      <section class="tiles">
+
+        <div class="tile">
+          <div class="text">
+            <h3 class="title">PREMIUM EDITORIAL VIDEO CONTENT</h3>
+            <p>
+              Extensive video library with 150 000+ unique video clips and custom in-house production & adaptation.
+            </p>
+          </div>
+          <div class="image">
+            <img src="https://campaigns.adten.eu/templates/simple-expander/image-1.jpg">
+          </div>
+        </div>
+
+        <div class="tile tile--alt">
+          <div class="text">
+            <h3 class="title">TECHNOLOGY & USER EXPERIENCE</h3>
+            <p>
+              End-to-end provider for digital solutions with top-notch video platforms, omnichannel video player and semantic targeting technology.
+            </p>
+          </div>
+          <div class="image">
+            <img src="https://campaigns.adten.eu/templates/simple-expander/image-2.jpg">
+          </div>
+        </div>
+
+        <div class="tile">
+          <div class="text">
+            <h3 class="title">MEDIA SALES</h3>
+            <p>
+              Incremental video ad space through new instream positions and a holistic yield management solution with an abundance of demand sources.
+            </p>
+          </div>
+          <div class="image">
+            <img src="https://campaigns.adten.eu/templates/simple-expander/image-3.jpg">
+          </div>
+        </div>
+
+      </section>
+
+
+      <section class="expander-slider my-custom-slider">
+        <div class="slider" data-items="1" data-desktop-items="3" data-loop data-autoplay data-gap="32">
+          <div class="item">
+            <div class="image">
+              <img src="assets/slide-1.jpg">
+            </div>
+            <h3 class="title">Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img src="assets/slide-2.jpg">
+            </div>
+            <h3 class="title">Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img src="assets/slide-3.jpg">
+            </div>
+            <h3 class="title">Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img src="assets/slide-4.jpg">
+            </div>
+            <h3 class="title">Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img src="assets/slide-5.jpg">
+            </div>
+            <h3 class="title">Lorem ipsum</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- <a class="sticky-cta" href="https://showheroes.com/" target="_blank">
+        Visit us >
+      </a> -->
+
+
+    </div>
+
+    <!-- Video module -->
+    <script src="js/video.js"></script>
+
+    <!-- Slider module -->
+    <script src="js/vendor/tiny-slider.js"></script>
+    <script src="js/slider.js" defer></script>
+    <script src="js/scrollDown.js" defer></script>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

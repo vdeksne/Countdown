@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'MTGSans-Regular'; /* Define the name to use in CSS */
+    src: url('../assets/font/MTGSans-Regular.woff2') format('woff2'); /* Path to the font file */
+    font-weight: normal; /* Optional: Specify the weight (e.g., normal, bold) */
+    font-style: normal; /* Optional: Specify the style (e.g., normal, italic) */
+  }
+
+  @font-face {
+    font-family: 'MTGSans-Bold'; /* Define the name to use in CSS */
+    src: url('../assets/font/MTGSans-Bold.woff2') format('woff2'); /* Path to the font file */
+    font-weight: bold; /* Optional: Specify the weight (e.g., normal, bold) */
+    font-style: normal; /* Optional: Specify the style (e.g., normal, italic) */
+  }
+
+  @font-face {
+    font-family: 'MTGSans-Light'; /* Define the name to use in CSS */
+    src: url('../assets/font/MTGSans-Light.woff2') format('woff2'); /* Path to the font file */
+    font-weight: light; /* Optional: Specify the weight (e.g., normal, bold) */
+    font-style: normal; /* Optional: Specify the style (e.g., normal, italic) */
+  }
+  
+  body {
+    font-family: 'MTGSans-Regular', sans-serif; /* Use the custom font, with a fallback */
+  }
+
+:root {
+    --color-main: #0b3144;
+    --color-secondary: #00ffae;
+    --color-text: #ffffff;
+    --color-background: #fff;
+
+
+    --padding-base: 2rem;
+}
+html {
+    font-family: 'MTGSans-Regular', sans-serif;
+    font-weight: normal;
+}
+
+.heading {
+    font-size: 2.5rem;
+}
+.lead {
+    width: 40rem;
+    max-width: 100%;
+}
+.subheading {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.title {
+    color: #E88C74;
+}
+
+.my-custom-slider {
+    margin-top: 4rem;
+}
+.my-custom-slider .title {
+    margin: 1rem 0 .5rem;
+}
+
+.intro {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.date {
+    display: flex;
+    gap: 0.18rem;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.4245rem;
+}
+h3 {
+    font-family: 'MTGSans-Bold';
+}
+
+h4 {
+    font-family: 'MTGSans-Light';
+}
+
+.intro-paragraph {
+    font-size: 1.125rem;
+    font-family: 'MTGSans-Light';
+}
+
+.video-buttons {
+    width: 16rem;
+    height: 4.375rem;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6.550000190734863px);
+    font-size: 1.125rem;
+    font-family: 'MTGSans-Light';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-buttons:hover {
+    border: 1px solid #FFF;
+    background: #FFF;
+    color: #000;
+}
+/* Styles to apply when the associated radio button is checked */
+input[type="radio"]:checked + .video-buttons {
+    border: 1px solid #FFF;
+    background: #FFF;
+    color: #000;
+}
+
+.video-buttons:active {
+    border: 1px solid #FFF;
+    background: #FFF;
+    color: #000;
+}
+.video-buttons:focus {
+    border: 1px solid #FFF;
+    background: #FFF;
+    color: #000;
+}
+
+.video-button-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    margin: 1rem 2rem;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0; /* Make the radio buttons invisible */
+    width: 0; /* Remove the space taken by the element */
+    height: 0; /* Remove the height */
+    margin: 0; /* Adjust margin to zero */
+}
+
+.logo img {
+padding: 1rem;
+width: 12.25rem;
+height: auto;
+}
+
+.intro-paragraph {
+    display: none;
+  }
+
+@media (max-width: 480px) {
+    .header .cta {
+        margin-top: 1rem;
+    }
+
+    .intro {
+        width: 100%;
+        height: 64rem;
+    }
+    .video-button-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 481px) {
+    .heading {
+        font-size: 3rem;
+    }
+}
