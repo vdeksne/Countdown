@@ -1,0 +1,212 @@
+:root {
+    --color-main: #0b3144;
+    --color-secondary: #00ffae;
+    --color-text: #333;
+    --color-background: #fff;
+
+    --weight-bold: bold;
+
+    --padding-base: 2rem;
+}
+html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: var(--font-size);
+    color: var(--color-text);
+    line-height: 1.25;
+    background-color: var(--color-background);
+    @include desktop {
+        font-size: 1.48vw;
+    }
+    @media (min-width: $width) {
+        font-size: 16px;
+    }
+}
+
+.expander {
+    width: $width;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: calc(var(--padding-base) * 3);
+}
+
+.section {
+    margin: calc(var(--padding-base) * 2) 0;
+    padding: 0 var(--padding-base);
+}
+
+.centered {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-base);
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.cta {
+    display: inline-block;
+    padding: calc(var(--padding-base) / 4) var(--padding-base);
+    font-size: 1.5rem;
+    color: #fff;
+    background: var(--color-main);
+    text-decoration: none;
+    font-weight: var(--weight-bold);
+    border-radius: calc(var(--padding-base) / 2.5);
+    transition: background .25s, color .25s;
+    &:hover {
+        color: var(--color-main);
+        background: var(--color-secondary);
+    }
+}
+
+.hero {
+    > img,
+    > picture,
+    > video {
+        display: block;
+        width: 100%;
+    }
+}
+
+.card {
+    .image {
+        img,
+        picture {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.tiles {
+    .tile {
+        .text {
+            padding: var(--padding-base);
+        }
+        .image,
+        .video {
+            img,
+            picture,
+            video {
+                display: block;
+                width: 100%;
+                max-width: none;
+            }
+        }
+    }
+    @include d {
+        .tile {
+            display: flex;
+            .text,
+            .image,
+            .video {
+                width: 50%;
+            }
+            .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: calc(var(--padding-base) / 2) var(--padding-base);
+                order: 1;
+            }
+            .image,
+            .video {
+                order: 2;
+            }
+            &:nth-child(even) {
+                .text {
+                    order: 2;
+                }
+                .image,
+                .video {
+                    order: 1;
+                }
+            }
+        }
+    }
+}
+
+.sticky-cta {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(var(--padding-base) * 2);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
+    background: var(--color-main);
+    border-radius: calc(var(--padding-base) / 2.5) calc(var(--padding-base) / 2.5) 0 0;
+    transition: background .25s, color .25s;
+    &:hover {
+        color: var(--color-main);
+        background: var(--color-secondary);
+    }
+}
+
+.scroll-down-button {
+    position: fixed;
+    left: 50%;
+    bottom: 20%;
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-50%, 0);
+    z-index: 1000;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../../assets/expander/down.svg') no-repeat center center / contain;
+    }
+    &::before {
+        animation: scrollDown 2s linear 0s infinite forwards;
+    }
+    &::after {
+        animation: scrollDown 2s linear -1s infinite forwards;
+    }
+    span {
+        clip: rect(0 0 0 0); 
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap; 
+        width: 1px;
+    }
+    &.scrolled {
+        transition: .5s;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        margin-top: -33%;
+        opacity: 0;
+    }
+    25%, 50% {
+        opacity: 1;
+    }
+    100% {
+        margin-top: 33%;
+        opacity: 0;
+    }
+}

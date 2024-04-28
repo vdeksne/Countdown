@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+    --color-main: #0b3144;
+    --color-secondary: #00ffae;
+    --color-text: #666;
+    --color-background: #fff;
+
+    --weight-bold: 500;
+
+    --padding-base: 2rem;
+}
+html {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.heading {
+    font-size: 2.5rem;
+}
+.lead {
+    width: 40rem;
+    max-width: 100%;
+}
+.subheading {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.title {
+    color: #E88C74;
+}
+
+.my-custom-slider {
+    margin-top: 4rem;
+}
+.my-custom-slider .title {
+    margin: 1rem 0 .5rem;
+}
+
+
+@media (max-width: 480px) {
+    .header .cta {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 481px) {
+    .heading {
+        font-size: 3rem;
+    }
+}
